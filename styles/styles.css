@@ -33,7 +33,10 @@ body {
 
 h1, 
 h2,
-h3, 
+h3,
+h4,
+h5,
+h6, 
 p, 
 ul {
     margin-top: 0;
@@ -48,7 +51,7 @@ img {
 
 /* задаю container */
 .container {
-    width: 1230px;
+    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -159,6 +162,7 @@ img {
 
 .section,
 .section-team {
+   
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -249,10 +253,13 @@ margin-bottom: 94;
 }
 
 /* Футер */
+footer {
+background-color: var(--secondary-background-color);
+}
 
 .footer {
     font-style: normal;
-    background-color: var(--secondary-background-color);
+
 }
 /* Логотип футеру */
 
