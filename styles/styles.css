@@ -31,7 +31,34 @@ body {
     background-color: var(--primary-background-color);
 }
 
+h1, 
+h2,
+h3, 
+p, 
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    display: block; 
+    max-width: 100%; 
+    height: auto;
+}
+
+/* задаю container */
+.container {
+    width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .primary-button {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 10px 32px;
+    text-align: center;
+
     font-family: inherit;
     font-weight: var(--primary-font-weight);
     font-size: 16px;
@@ -50,6 +77,11 @@ body {
 }
 
 .secondary-button {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 6px 22px;
+    text-align: center;
+    border: 0;
     font-family: inherit;
     font-weight: var(--secondary-font-weight);
     font-size: 16px;
@@ -67,6 +99,12 @@ body {
 }
 
 /* Логотип сайту */
+.logo-link {
+    display: inline-block;
+    padding-top: 24px;
+    padding-bottom: 25;
+}
+
 .logo-web {
     font-family: Raleway, sans-serif;
     font-weight: var(--primary-font-weight);
@@ -119,7 +157,15 @@ body {
 
 /* Секції */
 
+.section,
+.section-team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .section-title {
+    margin-bottom: 50px;
+
     font-weight: var(--primary-font-weight);
     font-size: 36px;
     line-height: 1.16;
@@ -129,9 +175,14 @@ body {
 
 /* Герой */
 
-.hero { background-color: var(--secondary-background-color); }
+.hero { background-color: var(--secondary-background-color); 
+text-align: center;
+margin-bottom: ;
+}
 
 .hero-title {
+    margin-bottom: 30px;
+
     font-style: 400;
     font-weight: 900;
     font-size: 44px;
@@ -145,6 +196,8 @@ body {
 /* Особливості */
 
 .features-list .title {
+    margin-bottom: 10px;
+
     font-weight: var(--primary-font-weight);
     font-size: 14px;
     line-height: 1.14;
@@ -159,7 +212,10 @@ body {
 
 /* Команда */
 
-.section-team { background-color: var(--additional-background-color); }
+.section-team { background-color: var(--additional-background-color); 
+margin-top: 94px;
+margin-bottom: 94;
+}
 
 .team-list { background-color: var(--primary-background-color); }
 
