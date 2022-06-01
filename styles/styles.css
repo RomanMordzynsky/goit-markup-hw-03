@@ -51,12 +51,13 @@ h3,
 h4,
 h5,
 h6, 
-p, 
-ul
+p,
+ul 
 {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
 }
+
 
 .section-title.visually-hidden {
     position: absolute;
@@ -89,7 +90,9 @@ img {
 
 .primary-button {
     display: inline-block;
+    margin-top: 30px;
     border-radius: 4px;
+    border: none;
     padding: 10px 32px;
 
     text-align: center;
@@ -140,7 +143,8 @@ img {
 .logo-link {
     display: inline-block;
     padding-top: 24px;
-    padding-bottom: 25;
+    padding-bottom: 25px;
+    margin-right: 93px;
 }
 
 .logo-web {
@@ -165,7 +169,7 @@ img {
 
 .nav-header {
     display: flex;
-    margin-right: 331px;
+    
 }
 
 .site-nav .link.current {
@@ -200,7 +204,10 @@ img {
 
 .contacts-div { display: flex; }
 
-.site-contacts { display: flex; }
+.site-contacts { 
+    display: flex; 
+    margin-left: auto;
+}
 
 .site-contacts .item + .item {
     margin-left: 50px;
@@ -228,11 +235,13 @@ img {
 
 .section,
 .section-team {
-    margin-top: 0;
-    margin-bottom: 0;
    
     padding-top: 94px;
     padding-bottom: 94px;
+}
+
+.section-work {
+    padding-top: 0;
 }
 
 .section-title {
@@ -249,8 +258,8 @@ img {
 /* Герой */
 
 .hero { 
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 
     text-align: center;
 
@@ -260,12 +269,13 @@ img {
 .hero-title {
     margin-bottom: 30px;
 
-    font-style: 400;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: .06em;
+    width: 696px;
+    margin: 0 auto;
     text-transform: uppercase;
 
     color: var(--primary-background-color);
@@ -273,15 +283,11 @@ img {
 
 /* Фільтри */
 
-.filters {
+.filters-list { 
     display: flex;
     justify-content: center;
-    margin-bottom: 34px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 50px;
 }
-
-.filters-list { display: flex; }
 
 .filters-list .item + .item {
     margin-left: 8px;
@@ -294,17 +300,13 @@ img {
 .works-list {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -30px;
-    margin-bottom: -30px;
-    padding: 0;
+    gap: 30px;
 }
 
 .works-list .item {
     width: 370px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    flex-basis: calc((100% - 60px) / 3);
 
-    border: 1px solid #EEEEEE;
 }
 
 .works-list .item:nth-child(3n + 1) {
@@ -319,7 +321,25 @@ img {
     margin-bottom: 0; 
 }
 
-.works-desc { margin: 20px 24px; }
+.works-desc { 
+    padding: 20px 24px; 
+
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+}
+
+.works-desc .title {margin-bottom: 4px;}
+
+.works-desc .text {
+    width: 322px;
+
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: .03em;
+    
+    color: #757575;
+}
 
 /* Особливості */
 
@@ -346,16 +366,23 @@ img {
 /* Команда */
 
 .section-team {  
-padding-top: 94px;
-padding-bottom: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 
-background-color: var(--additional-background-color);
+    background-color: var(--additional-background-color);
 }
 
 .team-list { 
     display: flex;
+}
 
-    background-color: var(--primary-background-color); 
+.team-list .item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: var(--primary-background-color);
 }
 
 .team-list .item + .item { margin-left: 30px; }
@@ -367,7 +394,7 @@ background-color: var(--additional-background-color);
 
     font-weight: var(--secondary-font-weight);
     font-size: 16px;
-    line-height: 1.18px;
+    line-height: 1.18;
     text-align: center;
 
     color: var(--secondary-text-color);
@@ -378,9 +405,8 @@ background-color: var(--additional-background-color);
 
 
 .team-list .text {
-    font-weight: 400;
     font-size: 16px;
-    line-height: 1.18px;
+    line-height: 1.18;
     text-align: center;
 }
 
@@ -406,17 +432,26 @@ background-color: var(--additional-background-color);
 
 /* Футер */
 
-.main-footer { background-color: var(--secondary-background-color); }
+.main-footer { 
+    padding: 60px 0;
+    background-color: var(--secondary-background-color); 
+}
 
 .footer {
-    padding: 60px 0;
     font-style: normal;
 
 }
 
 /* Логотип футеру */
 
-.footer .logo-studio { color: var(--primary-background-color); }
+.footer-studio { 
+    font-family: Raleway, sans-serif;
+    font-weight: var(--primary-font-weight);
+    font-size: 26px;
+    line-height: 1.2;
+    
+    color: var(--primary-background-color); 
+}
 
 /* Адреси */
 
