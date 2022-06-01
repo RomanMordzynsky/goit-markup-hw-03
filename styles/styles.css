@@ -307,6 +307,8 @@ img {
     width: 370px;
     flex-basis: calc((100% - 60px) / 3);
 
+    background-color: var(--primary-background-color: #fff);
+
 }
 
 .works-list .item:nth-child(3n + 1) {
@@ -401,8 +403,6 @@ img {
 }
 
 .team-list .text { margin-bottom: 30px; }
-
-
 
 .team-list .text {
     font-size: 16px;
